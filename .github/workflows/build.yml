@@ -17,7 +17,7 @@ on:
       DEVICE_TREE_URL:
         description: 'DEVICE_TREE_URL'
         required: true
-        default: 'https://github.com/chickendrop89/orangefox_device_xiaomi_tapas'
+        default: 'https://github.com/Skykkjbr/twrp_s24fe-test'
       DEVICE_TREE_BRANCH:
         description: 'DEVICE_TREE_BRANCH'
         required: true
@@ -25,19 +25,19 @@ on:
       DEVICE_PATH:
         description: 'DEVICE_PATH'
         required: true
-        default: 'device/xiaomi/tapas'
+        default: 'device/samsung/r12s'
       DEVICE_NAME:
         description: 'DEVICE_NAME'
         required: true
-        default: 'tapas'
+        default: 'r12s'
       DEVICE_VARIANT:
         description: 'DEVICE_VARIANT'
         required: true
-        default: 'tapas/topaz-A13+'
+        default: 's24-fe'
       MAKEFILE_NAME:
         description: 'MAKEFILE_NAME'
         required: true
-        default: 'twrp_tapas'
+        default: 'twrp_r12s'
       BUILD_TARGET:
         description: 'BUILD_TARGET'
         required: true
@@ -139,28 +139,26 @@ jobs:
         files: |
           ${{ steps.pwd.outputs.workspace-folder }}/fox_${{ github.event.inputs.MANIFEST_BRANCH }}/out/target/product/${{ github.event.inputs.DEVICE_NAME }}/*.img
           ${{ steps.pwd.outputs.workspace-folder }}/fox_${{ github.event.inputs.MANIFEST_BRANCH }}/out/target/product/${{ github.event.inputs.DEVICE_NAME }}/*.zip
-        name: orangefox-${{ github.event.inputs.DEVICE_VARIANT }}
+        name: twrp-${{ github.event.inputs.DEVICE_VARIANT }}
         tag_name: ${{ steps.date.outputs.builddate }}
         body: |
           Manifest: ${{ github.event.inputs.MANIFEST_BRANCH }}
-          Device: ${{ github.event.inputs.DEVICE_NAME }}/topaz
+          Device: ${{ github.event.inputs.DEVICE_NAME }}/r12s
           Releaase Date: ${{ steps.date.outputs.builddate }}
-
-          * [XDA Developers Thread](https://forum.xda-developers.com/t/unofficial-recovery-13-orangefox-recovery-project-tapas-topaz.4600157/)
           
-          This build works for both `topaz` and `tapas` variant !!!
+          This build works for `r12s` !!!
 
           Known Issues:
-          *
+          * Tell me
 
           **Notice:**
-          *
+          * First build
 
           Changelog:
-          *
+          * First build
 
           Flash Instructions:
           * `fastboot flash recovery xxx.img`
-          * `or use your existing recovery to flash the ZIP (recommended)`
+          * `or use your existing recovery to flash the TAR (recommended)`
       env:
         BILOLA_TOKEN: ${{ secrets.GITHUB_TOKEN }}
