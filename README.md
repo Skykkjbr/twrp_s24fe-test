@@ -20,3 +20,6 @@
 ```
 ## Multidisabler
 once in twrp go to advanced, terminal and type "multidisabler" to stop restoration of stock recovery
+
+Base source by : TheNoobDevs
+WIP
