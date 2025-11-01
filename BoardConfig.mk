@@ -106,6 +106,7 @@ TW_SKIP_ADDITIONAL_FSTAB := true # Let recovery.fstab define in the tree be only
 TW_FORCE_KEYMASTER_VER := true # Note that this is just a dummy value, because stock don't actually have keymaster, only keymint.
 
 # TWRP Configuration
+TW_DEVICE_VERSION := SM-S721x by sky
 TW_THEME := portrait_hdpi
 TW_EXTRA_LANGUAGES := true
 TW_SCREEN_BLANK_ON_BOOT := true
