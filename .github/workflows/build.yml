@@ -118,9 +118,7 @@ jobs:
           set +e
             source build/envsetup.sh
           set -e
-          lunch ${{ github.event.inputs.MAKEFILE_NAME }}-eng && make clean && mka adbd ${{ github.event.inputs.BUILD_TARGET }}image -j$(nproc --all)
-      working-directory: ${{ steps.pwd.outputs.workspace-folder }}
-      continue-on-error: true
+          lunch ${{ github.event.inputs.MAKEFILE_NAME }}-eng && make clean && export FOX_BUILD_ZIP=0 && mka adbd ${{ github.event.inputs.BUILD_TARGET }}image -j$(nproc --all)
 
     - name: Check the output directory before uploading
       run: |
