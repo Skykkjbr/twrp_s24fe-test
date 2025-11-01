@@ -163,4 +163,4 @@ jobs:
           * `fastboot flash recovery xxx.img`
           * `or use your existing recovery to flash the ZIP (recommended)`
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        BILOLA_TOKEN: ${{ secrets.GITHUB_TOKEN }}
