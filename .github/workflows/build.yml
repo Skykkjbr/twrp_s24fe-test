@@ -143,7 +143,7 @@ jobs:
         tag_name: ${{ steps.date.outputs.builddate }}
         body: |
           Manifest: ${{ github.event.inputs.MANIFEST_BRANCH }}
-          Device: ${{ github.event.inputs.DEVICE_NAME }}/r12s
+          Device: ${{ github.event.inputs.DEVICE_NAME }}
           Releaase Date: ${{ steps.date.outputs.builddate }}
           
           This build works for `r12s` !!!
